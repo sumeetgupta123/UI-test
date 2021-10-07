@@ -1,0 +1,224 @@
+.icon-section {
+  padding: 10px 20px;
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.27);
+  border-bottom: 2px solid #e1e1e1;
+  button {
+    border: 1px solid #ccc;
+    background: transparent;
+    border-radius: 4px;
+    margin-right: 10px;
+    padding: 5px;
+    width: 75px;
+    cursor: pointer;
+    &:hover {
+      background: #009688;
+      color: white;
+      border: none;
+    }
+  }
+}
+.arrow{
+  color: green;
+  margin-right: 5px;
+}
+.tick {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #757575;
+  color: white;
+  text-align: center;
+  margin-right: 10px;
+}
+h1 {
+  font-size: 18px;
+  margin-bottom: 0px;
+  .count {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+.card-container {
+  padding: 0 10px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.cards {
+  box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.27);
+  padding: 15px;
+  height: 80px;
+  background: white;
+  .name {
+    color: darkgray;
+    font-size: 16px;
+  }
+  .count {
+    color: black;
+    font-size: 30px;
+  }
+  .title {
+    color: grey;
+    font-size: 12px;
+  }
+}
+.gray-container {
+  background: #f9f9f9;
+  padding: 10px 10px 20px 10px;
+  border-bottom: 2px solid #e1e1e1;
+}
+.widget-container {
+  background: white;
+  padding: 10px 10px 20px 10px;
+  .cards {
+    width: 93%;
+    box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.27);
+    padding: 0px;
+    background: white;
+    margin: 0px 0px 0 10px;
+    height: 255px;
+  }
+  .header {
+    padding: 10px 15px;
+    border-bottom: 1px solid #ccc;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+  }
+}
+.accordian {
+  padding: 20px;
+  overflow-y: auto;
+  max-height: 214px;
+  .title {
+    color: orange;
+    font-size: 16px;
+    margin-right: 10px;
+  }
+  .count {
+    color: black;
+    font-size: 16px;
+  }
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.selling-details {
+  padding: 20px;
+  .sellername {
+    color: black;
+    font-size: 14px;
+  }
+  .sellertitle {
+    color: black;
+    font-size: 24px;
+  }
+  .sellercount {
+    color: #2f81ff;
+    font-size: 24px;
+    margin-left: 10px;
+  }
+}
+
+//carousal starts
+.leftRs {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  left: -17px;
+  border: none;
+  margin: auto 2px;
+  background: transparent;
+  font-size:30px;
+  z-index: 9;
+}
+.car-img{
+  height: 80px;
+  width: 100%;
+  border: 1px solid #e1e1e1;
+  padding: 10px 5px;
+  border-bottom: none;
+}
+.lable{
+  color: black;
+  font-size: 9px;
+  background-image: linear-gradient(white, grey);
+  position: relative;
+  bottom: 0;
+}
+.rightRs {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 999px;
+  right: -17px;
+  border: none;
+  margin: auto 2px;
+  background: transparent;
+  font-size:30px;
+  z-index: 9;
+}
+.myPoint {
+  margin: 0 44%;
+  float: left;
+  padding: 0;
+  width: 100%;
+  li {
+    cursor: pointer;
+    width: 10px;
+    float: left;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    list-style-type: none;
+    margin: 11px 5px 0 0;
+    height: 10px;
+    background: #ccc;
+  }
+  li.active, li:focus {
+    background-color: #4a4a4a;
+    outline:none;
+  }
+}
+//carosual ends
+.stock-widget {
+  .details {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 200px;
+    padding: 30px;
+    .item {
+      margin: 20px 0px;
+    }
+  }
+  .green {
+    color: green;
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  .orange {
+    color: orange;
+    margin-left: 10px;
+    font-size: 16px;
+  }
+  .blue {
+    color: #2f81ff;
+    margin-left: 10px;
+    font-size: 16px;
+  }
+}
+
+#pieChart {
+  width: 100%;
+  height: 200px;
+  float: left;
+}

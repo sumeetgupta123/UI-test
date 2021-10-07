@@ -1,0 +1,13 @@
+<div class="col-12 float-start sidenav p-0">
+
+    <div class="col-12 float-start logo-container">
+
+        <img class="logo" src="../../assets/QY7WSh.tif.png" alt="logo" />
+    </div>
+    <div class="col-12 float-start p-0 list">
+        <button class="col-12 navigate-btn float-start" *ngFor="let items of buttons; let i= index"
+            [routerLinkActiveOptions]="{exact: true}" routerLinkActive='active' routerLink="{{items.router}}">
+            <span>{{items.name}}</span>
+        </button>
+    </div>
+</div>

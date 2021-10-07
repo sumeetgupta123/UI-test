@@ -1,0 +1,132 @@
+<div class="col-12 float-start p-0">
+    <div class="col-12 float-start icon-section">
+        <button class="float-end"> download</button>
+        <button class="float-end"> print</button>
+        <button class="float-end"> share</button>
+    </div>
+    <div class="col-12 float-start gray-container">
+
+
+        <h1 class="col-12 float-start">Sales Activty <span class="count">(95)</span></h1>
+
+        <div class="col-12 float-start card-container">
+
+            <div class="col-12 col-md-6 col-lg-3 col-xl-3  float-start p-0 mt-20" *ngFor="let items of cards">
+                <div class="col-12 col-md-11 col-xl-11 float-start cards">
+                    <div class="col-12 float-start p-0">
+                        <span class="tick float-start">	&#x2714;</span>
+                        <span class="name float-start">{{items.name}}</span>
+                        <span class="count float-end"> {{items.count}}</span>
+                    </div>
+                    <div class="col-12 float-start p-0 mt-10">
+                        <span class="arrow float-start">&#x2191;</span>
+                        <span class="title float-start">{{items.title}}</span>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 float-start widget-container">
+        <div class="col-12 col-md-12 col-lg-6 col-xl-6 float-start task-widget mt-20">
+            <div class="col-11 float-start cards">
+                <div class="col-12 float-start header">
+                    Task
+                </div>
+                <div class="col-12 float-start accordian">
+                    <mat-accordion>
+                        <ng-container *ngFor="let items of accord">
+                            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+                                <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                        <span class="title">{{items.title}}</span>
+                                        <span class="count">({{items.count}})</span>
+                                    </mat-panel-title>
+
+                                </mat-expansion-panel-header>
+                                <p>{{items.desc}}</p>
+                            </mat-expansion-panel>
+                        </ng-container>
+
+                    </mat-accordion>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col-12 col-md-12 col-lg-6 col-xl-6  float-start selling-widget mt-20">
+            <div class="col-11 float-start cards">
+                <div class="col-12 float-start header">
+                    Top selling variants
+                </div>
+
+                <div class="col-12 float-start selling-details">
+                    <ng-container *ngFor="let items of sellitems">
+                        <div class="col-6 float-start p-0 mb-20 mt-20">
+                            <div class="col-12 float-start p-0">
+                                <span class="col-12 float-start p-0 sellername">{{items.name}}</span>
+                            </div>
+                            <div class="col-12 float-start p-0">
+                                <span class="sellertitle">{{items.title}}</span>
+                                <span class="sellercount">{{items.count}}</span>
+                            </div>
+                        </div>
+                    </ng-container>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-6 col-xl-6 float-start product-widget mt-20">
+            <div class="col-11 float-start cards">
+                <div class="col-12 float-start header">
+                  Products
+                </div>
+                <div class="col-12 p-2 float-start" align="center">
+                    <ngu-carousel #imageCarousel class="carousel-height col-12 no_pad float-left" [inputs]="carouselConfig"
+                        [dataSource]="carouselItemsImages">
+                        <div *nguCarouselDef="let item;let j=index" class="item col-12 p-2 float-left" align="center">
+                            <div class="col-11 text-center p-2" role="tabpanel" id="tabpanel2{{j}}"
+                               >
+                                <img class="car-img" src="{{item.carImages}}" alt="{{item.desc}}">
+                                <div class="lable">{{item.desc}}</div>
+                            </div>
+                        </div>
+                        <button NguCarouselPrev class="leftRs" [style.opacity]="imageCarousel.isFirst ? 0.5:1">&lt;</button>
+                        <button NguCarouselNext class="rightRs" [style.opacity]="imageCarousel.isLast ? 0.5:1">	&#x3e;</button>
+                        <ul class="myPoint" role="tablist" NguCarouselPoint>
+                            <li *ngFor="let detilsd of imageCarousel.pointNumbers; let j = index"
+                                [class.active]="j==imageCarousel.activePoint"
+                             
+                                id="tab2{{j}}" role="tab" tabindex="0"
+                                (click)="imageCarousel.moveTo(j)" (keypress)="imageCarousel.moveTo(j)">
+                                
+                            </li>
+                        </ul>
+                    </ngu-carousel>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-12 col-lg-6 col-xl-6  float-start stock-widget mt-20">
+            <div class="col-11 float-start cards">
+                <div class="col-12 float-start header">
+                   Stock details
+                </div>
+                <div class="col-6 float-start">
+                    <div id="pieChart" class="chart"></div>
+                </div>
+                <div class="col-6 float-start details">
+                    <ng-container *ngFor="let items of pChart">
+                        <div class="col-12 float-start item" >
+                            <span class="name">{{items.stocktypes}}</span>
+                            <span class="{{items.color}}">{{items.values}}%</span>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
